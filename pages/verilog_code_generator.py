@@ -35,34 +35,60 @@ def show():
     col1, col2 = st.columns(2)
 
     with col1:
-        total_bits = st.slider(
-            "Total bits",
-            min_value=4,
-            max_value=32,
-            value=4,
-        )
+        if not selected_type_of_code == "ASIC Verilog Multiplier":
+            total_bits = st.slider(
+                "Total bits",
+                min_value=4,
+                max_value=32,
+                value=4,
+            )
+        else:
+            multiplicand_bits = st.slider(
+                "Multiplicand bits",
+                min_value=4,
+                max_value=32,
+                value=4,
+            )
 
     with col2:
-        if not selected_type_of_hardware_module == "Accurate Adder":
-            if total_bits == 4:
-                inacc_bits = 3
-            else:
-                inacc_bits = st.slider(
-                    "Inaccurate bits",
-                    min_value=3,
-                    max_value=total_bits - 1,
-                )
+        if not selected_type_of_code == "ASIC Verilog Multiplier":
+            if not selected_type_of_hardware_module == "Accurate Adder":
+                if total_bits == 4:
+                    inacc_bits = 3
+                else:
+                    inacc_bits = st.slider(
+                        "Inaccurate bits",
+                        min_value=3,
+                        max_value=total_bits - 1,
+                    )
+        else:
+            multiplier_bits = st.slider(
+                "Multiplier bits",
+                min_value=4,
+                max_value=32,
+                value=4,
+            )
 
     st.subheader("4. Review and generate")
     chosen_options = {
         "type_of_verilog_code": selected_type_of_code,
         "type_of_hardware_module": selected_type_of_hardware_module,
-        "total_bits": total_bits,
+        "total_bits": total_bits
+        if not selected_type_of_code == "ASIC Verilog Multiplier"
+        else 0,
         "accurate_bits": total_bits - inacc_bits
         if not selected_type_of_hardware_module == "Accurate Adder"
+        and not selected_type_of_code == "ASIC Verilog Multiplier"
         else 0,
         "inaccurate_bits": inacc_bits
         if not selected_type_of_hardware_module == "Accurate Adder"
+        and not selected_type_of_code == "ASIC Verilog Multiplier"
+        else 0,
+        "multiplicand_bits": multiplicand_bits
+        if selected_type_of_code == "ASIC Verilog Multiplier"
+        else 0,
+        "multiplier_bits": multiplier_bits
+        if selected_type_of_code == "ASIC Verilog Multiplier"
         else 0,
     }
 
