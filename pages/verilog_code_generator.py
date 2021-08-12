@@ -44,11 +44,6 @@ def show():
                 max_value=total_bits - 1,
             )
 
-    # col1, col2, col3 = st.columns(3)
-    # col1.write(f"total_bits: {total_bits}")
-    # col2.write(f"accurate_bits: {total_bits-inacc_bits}")
-    # col3.write(f"inaccurate_bits: {inacc_bits}")
-
     st.subheader("3. Select type of hardware module")
     selected_type_of_hardware_module = st.radio(
         "Type of hardware modules", type_of_hardware_modules
@@ -62,6 +57,8 @@ def show():
         "accurate_bits": total_bits - inacc_bits,
         "inaccurate_bits": inacc_bits,
     }
+
     st.write(chosen_options)
-    if st.button("Generate"):
+
+    if st.button("Click to Generate"):
         print("clicked")
