@@ -9,9 +9,9 @@ tool_pages = {
 
 st.sidebar.title("Approximate Computing Tool")
 
-tool_choice = st.sidebar.selectbox(
+selected_tool_choice = st.sidebar.selectbox(
     "Select tool",
     tool_pages.keys(),
 )
 
-tool_pages[tool_choice].show()
+tool_pages[selected_tool_choice].show()
