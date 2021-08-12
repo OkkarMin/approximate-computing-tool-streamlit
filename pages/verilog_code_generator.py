@@ -2,16 +2,19 @@ import streamlit as st
 
 type_of_verilog_code = [
     "ASIC Verilog Adder",
-    "ASIC Verilog Multiplier",
     "FPGA Verilog Adder",
+    "ASIC Verilog Multiplier",
 ]
 
-type_of_hardware_modules = [
-    "HEAA",
-    "HOERAA",
-    "HOAANED",
-    "M-HERLOA",
-]
+type_of_hardware_modules = {
+    "ASIC Verilog Adder": ["HEAA", "HOERAA", "HOAANED", "M-HERLOA"],
+    "FPGA Verilog Adder": ["Accurate Adder", "HEAA", "HOERAA", "HOAANED", "M-HERLOA"],
+    "ASIC Verilog Multiplier": [
+        "MxN Accurate Multiplier",
+        "MxN Accurate Binary Array Multiplier",
+        "MxN PAAM01 with V-cut",
+    ],
+}
 
 
 def show():
@@ -23,7 +26,12 @@ def show():
         type_of_verilog_code,
     )
 
-    st.subheader("2. Select number of Total bits and Inaccurate bits")
+    st.subheader("2. Select type of hardware module")
+    selected_type_of_hardware_module = st.radio(
+        "Type of hardware modules", type_of_hardware_modules[selected_type_of_code]
+    )
+
+    st.subheader("3. Select number of Total bits and Inaccurate bits")
     col1, col2 = st.columns(2)
 
     with col1:
@@ -35,27 +43,27 @@ def show():
         )
 
     with col2:
-        if total_bits == 4:
-            inacc_bits = 3
-        else:
-            inacc_bits = st.slider(
-                "Inaccurate bits",
-                min_value=3,
-                max_value=total_bits - 1,
-            )
-
-    st.subheader("3. Select type of hardware module")
-    selected_type_of_hardware_module = st.radio(
-        "Type of hardware modules", type_of_hardware_modules
-    )
+        if not selected_type_of_hardware_module == "Accurate Adder":
+            if total_bits == 4:
+                inacc_bits = 3
+            else:
+                inacc_bits = st.slider(
+                    "Inaccurate bits",
+                    min_value=3,
+                    max_value=total_bits - 1,
+                )
 
     st.subheader("4. Review and generate")
     chosen_options = {
         "type_of_verilog_code": selected_type_of_code,
         "type_of_hardware_module": selected_type_of_hardware_module,
         "total_bits": total_bits,
-        "accurate_bits": total_bits - inacc_bits,
-        "inaccurate_bits": inacc_bits,
+        "accurate_bits": total_bits - inacc_bits
+        if not selected_type_of_hardware_module == "Accurate Adder"
+        else 0,
+        "inaccurate_bits": inacc_bits
+        if not selected_type_of_hardware_module == "Accurate Adder"
+        else 0,
     }
 
     st.write(chosen_options)
