@@ -14,4 +14,5 @@ selected_tool_choice = st.sidebar.selectbox(
     tool_pages.keys(),
 )
 
+# displays selected tool page
 tool_pages[selected_tool_choice].show()
