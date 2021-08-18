@@ -1,4 +1,5 @@
 import streamlit as st
+from tools.VerilogGenerators.VerilogGenerator import VerilogGenerator
 
 type_of_verilog_code = [
     "ASIC Verilog Adder",
@@ -31,7 +32,7 @@ def show():
         "Type of hardware modules", type_of_hardware_modules[selected_type_of_code]
     )
 
-    st.subheader("3. Select number of Total bits and Inaccurate bits")
+    st.subheader("3. Select number of bits")
     col1, col2 = st.columns(2)
 
     with col1:
@@ -69,6 +70,14 @@ def show():
                 value=4,
             )
 
+    if selected_type_of_hardware_module == "MxN PAAM01 with V-cut":
+        v_cut = st.slider(
+            "V Cut",
+            min_value=0,
+            max_value=multiplicand_bits,
+            value=3,
+        )
+
     st.subheader("4. Review and generate")
     chosen_options = {
         "type_of_verilog_code": selected_type_of_code,
@@ -90,9 +99,15 @@ def show():
         "multiplier_bits": multiplier_bits
         if selected_type_of_code == "ASIC Verilog Multiplier"
         else 0,
+        "v_cut": v_cut
+        if selected_type_of_hardware_module == "MxN PAAM01 with V-cut"
+        else 0,
     }
 
     st.write(chosen_options)
 
     if st.button("Click to Generate"):
-        print("clicked")
+        st.subheader("5. Generated Code")
+        verilog_code = VerilogGenerator.generate_verilog(chosen_options)
+
+        st.text(verilog_code)
