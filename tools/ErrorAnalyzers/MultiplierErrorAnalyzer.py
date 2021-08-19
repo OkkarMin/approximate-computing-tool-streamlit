@@ -55,9 +55,9 @@ def PAAM01_VCut(N1, N2, V_val):
         print(
             "\n Since atleast one of the two input is >10 bits, \n \
         Approximate Error Anaylsis is performed\n \
-        using million random input combinations...\n"
+        using 100,000 random input combinations...\n"
         )
-        num_rand_values = 1000000
+        num_rand_values = 100000
         for it1 in range(num_rand_values):
             num1 = random.randrange(2 ** N1)
             num2 = random.randrange(2 ** N2)
