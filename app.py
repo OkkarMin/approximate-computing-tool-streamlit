@@ -7,6 +7,11 @@ tool_pages = {
     "Accuracy Analysis": accuracy_analysis,
 }
 
+st.set_page_config(
+    page_title="Approximate Computing Tool",
+    page_icon="https://www.ntu.edu.sg/ResourcePackages/NTU/assets/images/favicon.png",
+)
+
 st.sidebar.title("Approximate Computing Tool")
 
 selected_tool_choice = st.sidebar.selectbox(
