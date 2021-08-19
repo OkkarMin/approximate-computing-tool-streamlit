@@ -14,5 +14,11 @@ selected_tool_choice = st.sidebar.selectbox(
     tool_pages.keys(),
 )
 
+st.sidebar.text("Read Documentation Here:")
+documentation_link = (
+    "[https://tool-documentation.vercel.app](https://tool-documentation.vercel.app)"
+)
+st.sidebar.markdown(documentation_link, unsafe_allow_html=True)
+
 # displays selected tool page
 tool_pages[selected_tool_choice].show()
