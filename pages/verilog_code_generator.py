@@ -47,7 +47,7 @@ def show():
             multiplicand_bits = st.slider(
                 "Multiplicand bits",
                 min_value=4,
-                max_value=32,
+                max_value=11,  # Change this to 32 after RAUNAQ is done
                 value=4,
             )
 
@@ -66,7 +66,7 @@ def show():
             multiplier_bits = st.slider(
                 "Multiplier bits",
                 min_value=4,
-                max_value=32,
+                max_value=11,  # Change this to 32 after RAUNAQ is done
                 value=4,
             )
 
