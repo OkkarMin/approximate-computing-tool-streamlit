@@ -7,7 +7,7 @@ type_of_accuracy_analysis = [
 ]
 
 type_of_hardware_modules = {
-    "Adder Accuracy Analysis": ["HEAA", "HOERAA", "HOAANED", "M-HERLOA"],
+    "Adder Accuracy Analysis": ["HEAA", "HOERAA", "HOAANED", "M_HERLOA"],
     "Multiplier Accuracy Analysis": ["MxN PAAM01 with V-cut"],
 }
 

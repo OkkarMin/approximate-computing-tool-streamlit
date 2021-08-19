@@ -8,7 +8,7 @@ type_of_error_analysis = [
 
 
 type_of_hardware_modules = {
-    "Adder Error Analysis": ["HEAA", "HOERAA", "HOAANED", "M-HERLOA"],
+    "Adder Error Analysis": ["HEAA", "HOERAA", "HOAANED", "M_HERLOA"],
     "Multiplier Error Analysis": ["MxN PAAM01 with V-cut"],
 }
 
