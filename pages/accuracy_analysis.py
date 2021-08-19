@@ -147,7 +147,7 @@ def show():
 
     if st.button("Click to analyze"):
         st.subheader("6. Result of analysis")
-        with st.spinner("Analyzing..."):
+        with st.spinner("Analyzing... It may take up to 2-3 mins"):
             if selected_type_of_accuracy_analysis == "Adder Accuracy Analysis":
                 (
                     accurate_adder_sum,

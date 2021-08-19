@@ -103,7 +103,7 @@ def show():
     if st.button("Click to analyze"):
 
         st.subheader("5. Result of analysis")
-        with st.spinner("Analyzing..."):
+        with st.spinner("Analyzing... It may take up to 2-3 mins"):
             if selected_type_of_error_analysis == "Adder Error Analysis":
                 average_error, mean_absolute_error, root_mean_square_error = getattr(
                     AdderErrorAnalyzer, selected_type_of_hardware_module
