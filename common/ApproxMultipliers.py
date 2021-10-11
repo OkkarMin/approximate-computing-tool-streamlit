@@ -71,10 +71,10 @@ def accurate_array_multiplier(num1, num2, N1, N2):
     return result
 
 
-# Approximate PAAM01 multiplier product with different V-cuts
+# Approximate AAM01 multiplier product with different V-cuts
 
 
-def PAAM01(num1, num2, N1, N2, V_val):
+def AAM01(num1, num2, N1, N2, V_val):
     num1 = num1 % (2 ** N1)
     num2 = num2 % (2 ** N2)
     result = 0

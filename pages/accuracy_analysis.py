@@ -8,7 +8,7 @@ type_of_accuracy_analysis = [
 
 type_of_hardware_modules = {
     "Adder Accuracy Analysis": ["HEAA", "HOERAA", "HOAANED", "M_HERLOA"],
-    "Multiplier Accuracy Analysis": ["MxN PAAM01 with V-cut"],
+    "Multiplier Accuracy Analysis": ["MxN AAM01 with V-cut"],
 }
 
 
@@ -64,7 +64,7 @@ def show():
                 value=4,
             )
 
-    if selected_type_of_hardware_module == "MxN PAAM01 with V-cut":
+    if selected_type_of_hardware_module == "MxN AAM01 with V-cut":
         v_cut = st.slider(
             "V Cut",
             min_value=0,
@@ -128,7 +128,7 @@ def show():
         if selected_type_of_accuracy_analysis == "Multiplier Accuracy Analysis"
         else 0,
         "v_cut": v_cut
-        if selected_type_of_hardware_module == "MxN PAAM01 with V-cut"
+        if selected_type_of_hardware_module == "MxN AAM01 with V-cut"
         else 0,
         "adder_first_unsigned_number": first_number_to_add
         if selected_type_of_accuracy_analysis == "Adder Accuracy Analysis"

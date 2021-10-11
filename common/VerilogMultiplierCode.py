@@ -1113,7 +1113,7 @@ def accurate_MxN_binary_array_multiplier(M, N):  # Accurate MxN Binary Array Mul
     return Mult
 
 
-def PAAM01_V_cut_MxN_binary_array_multiplier(
+def AAM01_V_cut_MxN_binary_array_multiplier(
     M, N, V_cut
 ):  # Accurate MxN Binary Array Multiplier
     # Remember to use constraint M>=3 and N>=3
@@ -1643,7 +1643,7 @@ def PAAM01_V_cut_MxN_binary_array_multiplier(
     return Mult
 
 
-def paam01_v0_8x6_multiplier():  # 8x6 PAAM01-V0 Approximate Multiplier
+def paam01_v0_8x6_multiplier():  # 8x6 AAM01-V0 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -1929,7 +1929,7 @@ def paam01_v0_8x6_multiplier():  # 8x6 PAAM01-V0 Approximate Multiplier
     return Mult
 
 
-def paam01_v0_8x8_multiplier():  # 8x8 PAAM01-V0 Approximate Multiplier
+def paam01_v0_8x8_multiplier():  # 8x8 AAM01-V0 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -2290,7 +2290,7 @@ def paam01_v0_8x8_multiplier():  # 8x8 PAAM01-V0 Approximate Multiplier
     return Mult
 
 
-def paam01_v1_8x6_multiplier():  # 8x6 PAAM01-V1 Approximate Multiplier
+def paam01_v1_8x6_multiplier():  # 8x6 AAM01-V1 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -2572,7 +2572,7 @@ def paam01_v1_8x6_multiplier():  # 8x6 PAAM01-V1 Approximate Multiplier
     return Mult
 
 
-def paam01_v1_8x8_multiplier():  # 8x8 PAAM01-V1 Approximate Multiplier
+def paam01_v1_8x8_multiplier():  # 8x8 AAM01-V1 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -2928,7 +2928,7 @@ def paam01_v1_8x8_multiplier():  # 8x8 PAAM01-V1 Approximate Multiplier
     return Mult
 
 
-def paam01_v2_8x6_multiplier():  # 8x6 PAAM01-V2 Approximate Multiplier
+def paam01_v2_8x6_multiplier():  # 8x6 AAM01-V2 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -3201,7 +3201,7 @@ def paam01_v2_8x6_multiplier():  # 8x6 PAAM01-V2 Approximate Multiplier
     return Mult
 
 
-def paam01_v2_8x8_multiplier():  # 8x8 PAAM01-V2 Approximate Multiplier
+def paam01_v2_8x8_multiplier():  # 8x8 AAM01-V2 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -3547,7 +3547,7 @@ def paam01_v2_8x8_multiplier():  # 8x8 PAAM01-V2 Approximate Multiplier
     return Mult
 
 
-def paam01_v3_8x6_multiplier():  # 8x6 PAAM01-V3 Approximate Multiplier
+def paam01_v3_8x6_multiplier():  # 8x6 AAM01-V3 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -3806,7 +3806,7 @@ def paam01_v3_8x6_multiplier():  # 8x6 PAAM01-V3 Approximate Multiplier
     return Mult
 
 
-def paam01_v3_8x8_multiplier():  # 8x8 PAAM01-V3 Approximate Multiplier
+def paam01_v3_8x8_multiplier():  # 8x8 AAM01-V3 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -4137,7 +4137,7 @@ def paam01_v3_8x8_multiplier():  # 8x8 PAAM01-V3 Approximate Multiplier
     return Mult
 
 
-def paam01_v4_8x6_multiplier():  # 8x6 PAAM01-V4 Approximate Multiplier
+def paam01_v4_8x6_multiplier():  # 8x6 AAM01-V4 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -4377,7 +4377,7 @@ def paam01_v4_8x6_multiplier():  # 8x6 PAAM01-V4 Approximate Multiplier
     return Mult
 
 
-def paam01_v4_8x8_multiplier():  # 8x8 PAAM01-V4 Approximate Multiplier
+def paam01_v4_8x8_multiplier():  # 8x8 AAM01-V4 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -4688,7 +4688,7 @@ def paam01_v4_8x8_multiplier():  # 8x8 PAAM01-V4 Approximate Multiplier
     return Mult
 
 
-def paam01_v5_8x6_multiplier():  # 8x6 PAAM01-V5 Approximate Multiplier
+def paam01_v5_8x6_multiplier():  # 8x6 AAM01-V5 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -4901,7 +4901,7 @@ def paam01_v5_8x6_multiplier():  # 8x6 PAAM01-V5 Approximate Multiplier
     return Mult
 
 
-def paam01_v5_8x8_multiplier():  # 8x8 PAAM01-V5 Approximate Multiplier
+def paam01_v5_8x8_multiplier():  # 8x8 AAM01-V5 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -5187,7 +5187,7 @@ def paam01_v5_8x8_multiplier():  # 8x8 PAAM01-V5 Approximate Multiplier
     return Mult
 
 
-def paam01_v6_8x6_multiplier():  # 8x6 PAAM01-V6 Approximate Multiplier
+def paam01_v6_8x6_multiplier():  # 8x6 AAM01-V6 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -5373,7 +5373,7 @@ def paam01_v6_8x6_multiplier():  # 8x6 PAAM01-V6 Approximate Multiplier
     return Mult
 
 
-def paam01_v6_8x8_multiplier():  # 8x8 PAAM01-V6 Approximate Multiplier
+def paam01_v6_8x8_multiplier():  # 8x8 AAM01-V6 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -5629,7 +5629,7 @@ def paam01_v6_8x8_multiplier():  # 8x8 PAAM01-V6 Approximate Multiplier
     return Mult
 
 
-def paam01_v7_8x6_multiplier():  # 8x6 PAAM01-V7 Approximate Multiplier
+def paam01_v7_8x6_multiplier():  # 8x6 AAM01-V7 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")
@@ -5777,7 +5777,7 @@ def paam01_v7_8x6_multiplier():  # 8x6 PAAM01-V7 Approximate Multiplier
     return Mult
 
 
-def paam01_v7_8x8_multiplier():  # 8x8 PAAM01-V7 Approximate Multiplier
+def paam01_v7_8x8_multiplier():  # 8x8 AAM01-V7 Approximate Multiplier
 
     AndModule = Module("and_2inp")
     andoutp = AndModule.Output("res")

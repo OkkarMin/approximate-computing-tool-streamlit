@@ -9,7 +9,7 @@ type_of_error_analysis = [
 
 type_of_hardware_modules = {
     "Adder Error Analysis": ["HEAA", "HOERAA", "HOAANED", "M_HERLOA"],
-    "Multiplier Error Analysis": ["MxN PAAM01 with V-cut"],
+    "Multiplier Error Analysis": ["MxN AAM01 with V-cut"],
 }
 
 
@@ -65,7 +65,7 @@ def show():
                 value=4,
             )
 
-    if selected_type_of_hardware_module == "MxN PAAM01 with V-cut":
+    if selected_type_of_hardware_module == "MxN AAM01 with V-cut":
         v_cut = st.slider(
             "V Cut",
             min_value=0,
@@ -95,7 +95,7 @@ def show():
         if selected_type_of_error_analysis == "Multiplier Error Analysis"
         else 0,
         "v_cut": v_cut
-        if selected_type_of_hardware_module == "MxN PAAM01 with V-cut"
+        if selected_type_of_hardware_module == "MxN AAM01 with V-cut"
         else 0,
     }
     st.write(chosen_options)
@@ -113,7 +113,7 @@ def show():
                     average_error,
                     mean_absolute_error,
                     root_mean_square_error,
-                ) = MultiplierErrorAnalyzer.PAAM01_VCut(
+                ) = MultiplierErrorAnalyzer.AAM01_VCut(
                     multiplicand_bits, multiplier_bits, v_cut
                 )
 

@@ -19,7 +19,7 @@ def analyze(user_chosen_options):
         multiplier_bits,
     )
 
-    inaccurate_multiplier_product = ApproxMultipliers.PAAM01(
+    inaccurate_multiplier_product = ApproxMultipliers.AAM01(
         multiplier_first_unsigned_number,
         multiplier_second_unsigned_number,
         multiplicand_bits,
@@ -54,7 +54,5 @@ def print_analysis(
     inaccurate_multiplier_accuracy,
 ):
     print("\nAccurate Multiplier Product:\t", accurate_multiplier_product, "\n")
-    print("\nPAAM01-Vcut Multiplier Product:\t", inaccurate_multiplier_product, "\n")
-    print(
-        "\nPAAM01-Vcut Multiplier Accuracy %:\t", inaccurate_multiplier_accuracy, "\n"
-    )
+    print("\nAAM01-Vcut Multiplier Product:\t", inaccurate_multiplier_product, "\n")
+    print("\nAAM01-Vcut Multiplier Accuracy %:\t", inaccurate_multiplier_accuracy, "\n")

@@ -13,7 +13,7 @@ type_of_hardware_modules = {
     "ASIC Verilog Multiplier": [
         "MxN Accurate Multiplier",
         "MxN Accurate Binary Array Multiplier",
-        "MxN PAAM01 with V-cut",
+        "MxN AAM01 with V-cut",
     ],
 }
 
@@ -70,7 +70,7 @@ def show():
                 value=4,
             )
 
-    if selected_type_of_hardware_module == "MxN PAAM01 with V-cut":
+    if selected_type_of_hardware_module == "MxN AAM01 with V-cut":
         v_cut = st.slider(
             "V Cut",
             min_value=0,
@@ -100,7 +100,7 @@ def show():
         if selected_type_of_code == "ASIC Verilog Multiplier"
         else 0,
         "v_cut": v_cut
-        if selected_type_of_hardware_module == "MxN PAAM01 with V-cut"
+        if selected_type_of_hardware_module == "MxN AAM01 with V-cut"
         else 0,
     }
 
