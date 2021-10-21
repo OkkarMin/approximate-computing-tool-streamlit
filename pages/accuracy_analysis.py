@@ -43,7 +43,7 @@ def show():
                 "Multiplicand bits",
                 min_value=3,
                 max_value=32,
-                value=3,
+                value=4,
             )
 
     with col2:
@@ -61,14 +61,14 @@ def show():
                 "Multiplier bits",
                 min_value=3,
                 max_value=32,
-                value=3,
+                value=4,
             )
 
     if selected_type_of_hardware_module == "MxN AAM01 with V-cut":
         v_cut = st.slider(
             "V Cut",
             min_value=0,
-            max_value=multiplicand_bits+multiplier_bits-3,
+            max_value=multiplicand_bits + multiplier_bits - 3,
             value=3,
         )
 
