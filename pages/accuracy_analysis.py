@@ -78,16 +78,16 @@ def show():
     if not selected_type_of_accuracy_analysis == "Multiplier Accuracy Analysis":
         with col1:  # Adder Accuracy Analysis
             first_number_to_add = st.number_input(
-                f"First number to be added (unsigned) 0 to {2**(total_bits-1)}",
+                f"First number to be added (unsigned) 0 to {2**(total_bits)-1}",
                 min_value=0,
-                max_value=2 ** (total_bits - 1),
+                max_value=2 ** (total_bits) - 1,
                 value=4,
             )
         with col2:
             second_number_to_add = st.number_input(
-                f"Second number to be added (unsigned) 0 to {2**(total_bits-1)}",
+                f"Second number to be added (unsigned) 0 to {2**(total_bits)-1}",
                 min_value=0,
-                max_value=2 ** (total_bits - 1),
+                max_value=2 ** (total_bits) - 1,
                 value=4,
             )
     else:  # Multiplier Accuracy Analysis
